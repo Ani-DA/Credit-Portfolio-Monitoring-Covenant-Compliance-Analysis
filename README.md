@@ -108,7 +108,7 @@ This clearly suggests stricter monitoring of these loans to further avoid loan d
 * These results suggest that while Debt/EBITDA is the most commonly breached, Current Ratio and LTV covenants are more reliable early warning indicators of actual loan defaults.
 
 
-**Q4.Which sectors or regions show the sharpest rise in leverage (Debt/EBITDA) in the past year?**
+**Q4.How has the rate of covenant breaches changed over time?**
 
 ![Q4](https://github.com/user-attachments/assets/1ba5e5b4-d81d-4f57-9027-28e33316157b)
 
@@ -121,9 +121,25 @@ This clearly suggests stricter monitoring of these loans to further avoid loan d
 
 * These insights support the need for proactive risk management, potentially including earlier interventions or revised covenant frameworks to mitigate future defaults.
 
-**Q5.How has the rate of covenant breaches changed over time?**
+**Q5.Which sectors or regions show the sharpest rise in leverage (Debt/EBITDA) in the past year?**
+
 
 
 **Q6.If covenant thresholds are tightened (e.g., LTV ≤ 0.65, Debt/EBITDA ≤ 3), how many loans would be in breach?**
 
+![Q6](https://github.com/user-attachments/assets/26d06b88-a5cd-4736-86b5-5c09bc18eddf)
 
+
+
+**Insights**
+
+
+* Tightening covenant thresholds would drastically increase the number of detected breaches across the portfolio:
+
+* LTV breaches would rise from 108 to 2,786,
+
+* Debt/EBITDA breaches would spike from 0 to 5,530,
+
+* Current Ratio breaches would increase from 21 to 841.
+
+* Despite the total number of loans (959) remaining the same, these elevated breach counts reflect how stricter financial covenants would classify a significantly larger proportion of loans as at-risk. While this could improve early detection of financial stress, it may also lead to operational and compliance implications such as covenant renegotiations or loan repricing. The analysis suggests a trade-off between early warning effectiveness and portfolio manageability.

@@ -2,6 +2,7 @@
 
 
 
+
 ## 1. Project Overview 
 
 This project simulates a comprehensive credit risk monitoring system for a portfolio of SME loans . It includes synthetic datasets for borrowers, loans, covenants, and quarterly financials, enabling in-depth analysis of covenant breaches, early warning indicators, and credit rating effectiveness. Key metrics such as DSCR, LTV, Debt/EBITDA, and Current Ratio are calculated and tracked over time. Analytical SQL views and queries help answer executive-level questions like "What % of the loan book is at risk?" and "Which sectors show rising leverage?". 
@@ -42,7 +43,6 @@ This project addresses credit risk management challenges faced by financial inst
 
 * What percentage of SME loans are currently at risk due to covenant breaches or weak financials?
 * Which sectors and regions exhibit the highest credit risk?
-* What are the key early warning indicators (e.g., high leverage: Debt/EBITDA > 4, low liquidity: Current Ratio < 1)?
 * How effective are current covenant types (LTV, DSCR, Debt/EBITDA) in predicting loan distress?
 * What financial trends typically precede defaults or covenant breaches (e.g., revenue decline, worsening ratios)?
 * How has the rate of covenant breaches changed over time?
@@ -69,5 +69,28 @@ Now, on to the business questions
 
 **Q1.What percentage of SME loans are currently at risk due to covenant breaches or weak financials?**
 
+![Q1](https://github.com/user-attachments/assets/c7091b5e-5209-4c03-9adc-cbfcf1629ccf)
 
+**Insights**
+ 
+With 959 total loans, 841 loans have breached covenants in different areas, making the at risk loan percentage around 88%. 
+This clearly suggests stricter monitoring of these loans to further avoid loan default.
+
+
+**Q2.Which sectors and regions exhibit the highest credit risk?**
+
+![Q2](https://github.com/user-attachments/assets/6a1a643c-c300-49b2-910d-6d8e05cc1c28)
+
+
+**Insights**
+
+The Isle of Man exhibits the highest credit risk among all regions, with 57% of its loans classified as "at risk." This is followed by England (50.77%), Scotland (49.75%), Northern Ireland (48.66%), and Wales (46.99%). Despite Northern Ireland having the highest number of total loans, its proportion of at-risk loans is comparatively lower than the Isle of Man.
+
+From a sector perspective, the Retail sector stands out with both the highest number of sanctioned loans and the highest proportion of at-risk loans at 69%, indicating a significant concentration of credit risk. It is followed by Manufacturing (57.89%), Hospitality (55.26%), and Logistics (52.48%). In contrast, sectors such as Technology (40.74%) and Professional Services (35.79%) show comparatively lower risk exposure.
+
+These insights help identify geographic and industry clusters with elevated credit risk, enabling targeted credit monitoring and risk mitigation strategies.
+
+
+
+**Q3.How effective are current covenant types (LTV, DSCR, Debt/EBITDA) in predicting loan distress?**
 

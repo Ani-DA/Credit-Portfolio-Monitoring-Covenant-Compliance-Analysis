@@ -8,6 +8,8 @@
 This project simulates a comprehensive credit risk monitoring system for a portfolio of SME loans . It includes synthetic datasets for borrowers, loans, covenants, and quarterly financials, enabling in-depth analysis of covenant breaches, early warning indicators, and credit rating effectiveness. Key metrics such as DSCR, LTV, Debt/EBITDA, and Current Ratio are calculated and tracked over time. Analytical SQL views and queries help answer executive-level questions like "What % of the loan book is at risk?" and "Which sectors show rising leverage?". 
 
 **Data Overview**
+
+
 This project uses a set of simulated but realistic tables representing key entities in an SME loan portfolio, designed to mirror a real-world credit monitoring system. The data includes:
 
 * **`borrower_data`**: Contains core SME customer information including `sector`, `region`, and `risk_rating`. This is essential for segmentation, trend analysis, and understanding borrower demographics
@@ -44,7 +46,6 @@ This project addresses credit risk management challenges faced by financial inst
 * What percentage of SME loans are currently at risk due to covenant breaches or weak financials?
 * Which sectors and regions exhibit the highest credit risk?
 * How effective are current covenant types (LTV, DSCR, Debt/EBITDA) in predicting loan distress?
-* What financial trends typically precede defaults or covenant breaches (e.g., revenue decline, worsening ratios)?
 * How has the rate of covenant breaches changed over time?
 * Which sectors or regions show the sharpest rise in leverage (Debt/EBITDA) in the past year?
 * If covenant thresholds are tightened (e.g., LTV ≤ 0.65, Debt/EBITDA ≤ 3), how many loans would be in breach?
@@ -84,13 +85,45 @@ This clearly suggests stricter monitoring of these loans to further avoid loan d
 
 **Insights**
 
-The Isle of Man exhibits the highest credit risk among all regions, with 57% of its loans classified as "at risk." This is followed by England (50.77%), Scotland (49.75%), Northern Ireland (48.66%), and Wales (46.99%). Despite Northern Ireland having the highest number of total loans, its proportion of at-risk loans is comparatively lower than the Isle of Man.
+* The Isle of Man exhibits the highest credit risk among all regions, with 57% of its loans classified as "at risk." This is followed by England (50.77%), Scotland (49.75%), Northern Ireland (48.66%), and Wales (46.99%). Despite Northern Ireland having the highest number of total loans, its proportion of at-risk loans is comparatively lower than the Isle of Man.
 
-From a sector perspective, the Retail sector stands out with both the highest number of sanctioned loans and the highest proportion of at-risk loans at 69%, indicating a significant concentration of credit risk. It is followed by Manufacturing (57.89%), Hospitality (55.26%), and Logistics (52.48%). In contrast, sectors such as Technology (40.74%) and Professional Services (35.79%) show comparatively lower risk exposure.
+* From a sector perspective, the Retail sector stands out with both the highest number of sanctioned loans and the highest proportion of at-risk loans at 69%, indicating a significant concentration of credit risk. It is followed by Manufacturing (57.89%), Hospitality (55.26%), and Logistics (52.48%). In contrast, sectors such as Technology (40.74%) and Professional Services (35.79%) show comparatively lower risk exposure.
 
-These insights help identify geographic and industry clusters with elevated credit risk, enabling targeted credit monitoring and risk mitigation strategies.
+* These insights help identify geographic and industry clusters with elevated credit risk, enabling targeted credit monitoring and risk mitigation strategies.
 
 
 
 **Q3.How effective are current covenant types (LTV, DSCR, Debt/EBITDA) in predicting loan distress?**
+
+![Q3](https://github.com/user-attachments/assets/1f293bc5-346d-4d75-93b1-4de50ad08a1c)
+
+
+**Insights**
+
+
+* The table evaluates the predictive power of different covenant types by measuring how often a breach in each covenant is followed by an actual loan default. While Debt/EBITDA breaches are the most frequent (297 breaches across 518 loans), only 9.09% of those breaches resulted in a default, indicating limited predictive strength.
+
+* On the other hand, Current Ratio breaches, though fewer in number (32 out of 559 loans), had the highest predictive power, with 12.5% of breached loans eventually defaulting. Similarly, LTV breaches show moderate effectiveness with an 11.84% conversion to default, followed by DSCR at 8.82%.
+
+* These results suggest that while Debt/EBITDA is the most commonly breached, Current Ratio and LTV covenants are more reliable early warning indicators of actual loan defaults.
+
+
+**Q4.Which sectors or regions show the sharpest rise in leverage (Debt/EBITDA) in the past year?**
+
+![Q4](https://github.com/user-attachments/assets/1ba5e5b4-d81d-4f57-9027-28e33316157b)
+
+
+**Insights**
+
+* An analysis of quarterly covenant breach trends across the SME loan portfolio reveals a consistently high breach rate, averaging above 61% throughout the observed periods. The highest breach rate occurred in Q3 2021 (July 2021) at 67.78%, followed closely by Q3 2022 (66.53%), indicating possible seasonal or economic stress patterns during mid-year periods.
+
+* Despite minor fluctuations, the overall breach rate remained remarkably stable, ranging between 61% and 68%, suggesting that a significant portion of loans consistently fail to meet covenant thresholds. This persistent pattern may indicate systemic financial stress across the portfolio or the need to reevaluate the stringency and structure of covenant requirements.
+
+* These insights support the need for proactive risk management, potentially including earlier interventions or revised covenant frameworks to mitigate future defaults.
+
+**Q5.How has the rate of covenant breaches changed over time?**
+
+
+**Q6.If covenant thresholds are tightened (e.g., LTV ≤ 0.65, Debt/EBITDA ≤ 3), how many loans would be in breach?**
+
 

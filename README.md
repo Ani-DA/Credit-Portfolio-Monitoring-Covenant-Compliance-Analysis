@@ -49,6 +49,7 @@ This project addresses credit risk management challenges faced by financial inst
 * How has the rate of covenant breaches changed over time?
 * Which sectors or regions show the sharpest rise in leverage (Debt/EBITDA) in the past year?
 * If covenant thresholds are tightened (e.g., LTV ≤ 0.65, Debt/EBITDA ≤ 3), how many loans would be in breach?
+* What is the Y-O-Y Revenue change of the companies ?
 
 
 ## 3. Analysis and Insights
@@ -110,7 +111,7 @@ This clearly suggests stricter monitoring of these loans to further avoid loan d
 
 **Q4.How has the rate of covenant breaches changed over time?**
 
-![Q4](https://github.com/user-attachments/assets/1ba5e5b4-d81d-4f57-9027-28e33316157b)
+![Q4](https://github.com/user-attachments/assets/e0afd151-f0a8-401d-b9f0-5f0cc596821c)
 
 
 **Insights**
@@ -143,3 +144,14 @@ This clearly suggests stricter monitoring of these loans to further avoid loan d
 * Current Ratio breaches would increase from 21 to 841.
 
 * Despite the total number of loans (959) remaining the same, these elevated breach counts reflect how stricter financial covenants would classify a significantly larger proportion of loans as at-risk. While this could improve early detection of financial stress, it may also lead to operational and compliance implications such as covenant renegotiations or loan repricing. The analysis suggests a trade-off between early warning effectiveness and portfolio manageability.
+
+
+
+**Q7.What is the Y-O-Y Revenue change of the companies ?**
+
+![Q7](https://github.com/user-attachments/assets/759cfca9-460d-4602-824c-a87f23f811fb)
+
+**Assumptions**
+
+If the revenue decline is more than 10% from last year, then those companies are marked, otherwise they are marked Stable.
+

@@ -1,4 +1,4 @@
-# Credit Portfolio Monitoring Covenant Compliance Analysis
+# Credit Portfolio Monitoring & Covenant Compliance Analysis
 
 
 ![credit risk github](https://github.com/user-attachments/assets/2bb2b998-a606-4834-9ba5-122a3c6ea7e0)

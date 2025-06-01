@@ -125,6 +125,22 @@ This clearly suggests stricter monitoring of these loans to further avoid loan d
 **Q5.Which sectors or regions show the sharpest rise in leverage (Debt/EBITDA) in the past year?**
 
 
+**Sector:**
+
+
+![Q5 S](https://github.com/user-attachments/assets/5a6dcab4-1cb5-4c4e-87fa-584045047180)
+
+**Region:**
+
+![Q5R](https://github.com/user-attachments/assets/6e39466f-c6dc-4d9a-9efa-3be5e8af0af6)
+
+
+**Insights**
+
+* Finance sector experiences sharpest spike in mid 2021 peaking at 3.7k average_debt_ebitda, possibly suggesting heavy borrowing or reduced earnings (EBITDA) during recovery periods post-lockdowns, But it is 
+worth having a thorough drill down. Technology sector experices decline in late 2022.
+
+* Isle of Man experinces steep surge in average DEBT_EBITDA in mid 2021, the same period in which the Financial sector experiences huge spike, making a thorough analysis a priority. Wales, Scotland and England also exhibited increases just before the same period, but to a lesser extent. 
 
 **Q6.If covenant thresholds are tightened (e.g., LTV ≤ 0.65, Debt/EBITDA ≤ 3), how many loans would be in breach?**
 
@@ -154,4 +170,99 @@ This clearly suggests stricter monitoring of these loans to further avoid loan d
 **Assumptions**
 
 If the revenue decline is more than 10% from last year, then those companies are marked, otherwise they are marked Stable.
+
+
+
+
+## 4. Code Analysis
+
+I have done the analysis in SQL Server Management Studio. The entire sql file is attached in the repository. 
+Here I'm attaching some code snippets for the analysis I've done for the business questions:
+
+**What percentage of SME loans are currently at risk due to covenant breaches or weak financials?**
+
+![sql3](https://github.com/user-attachments/assets/7a9ebd21-2ade-4001-899c-9cc019d58714)
+
+
+**Which sectors and regions exhibit the highest credit risk?**
+  
+![sql4](https://github.com/user-attachments/assets/127e1375-eb0e-451a-b836-72239860b436)
+
+
+
+![sql5](https://github.com/user-attachments/assets/28b0a869-03e9-428e-8d7d-3db65554beb0)
+
+
+**How effective are current covenant types (LTV, DSCR, Debt/EBITDA) in predicting loan distress?**
+
+
+![sql6](https://github.com/user-attachments/assets/85557eb6-8d2e-4b37-86fb-c7227dd4ea8b)
+
+
+**How has the rate of covenant breaches changed over time?**
+
+
+![sql7](https://github.com/user-attachments/assets/9642bdff-fe3b-44dd-a275-abf0dd3975a3)
+
+
+**Which sectors or regions show the sharpest rise in leverage (Debt/EBITDA) in the past year?**
+![sql8](https://github.com/user-attachments/assets/8c5f7d60-3988-4dc1-aff1-4c31be6f0191)
+
+
+**If covenant thresholds are tightened (e.g., LTV ≤ 0.65, Debt/EBITDA ≤ 3), how many loans would be in breach?**
+
+![sql9](https://github.com/user-attachments/assets/0ea72296-0b7d-4707-8c60-98af4bff6591)
+
+**What is the Y-O-Y Revenue change of the companies ?**
+![sql10](https://github.com/user-attachments/assets/0a4262e0-0f72-498c-9d99-7c87d786accd)
+
+
+## 4. Recommendations
+
+### 1. **Strengthen Monitoring in High-Risk Regions**
+
+* The **Isle of Man** exhibits the highest proportion of at-risk loans (57%), **England** with 50% ,signaling a significant concentration of regional credit risk.
+* **Recommendation**: Implement enhanced borrower monitoring and possibly higher risk-based pricing or collateral requirements specially in these regions. Consider conducting region-specific credit reviews to understand underlying causes of elevated risk.
+
+---
+
+### 2. **Reassess Sectoral Exposure and Lending Strategies**
+
+* The **Retail sector** has both the highest loan volume and the highest risk (69% at-risk), followed by Manufacturing, Hospitality, and Logistics.
+* **Recommendation**: Reduce exposure or apply more stringent credit approval and monitoring for these high-risk sectors. Simultaneously, increase strategic lending towards **Technology** and **Professional Services**, which exhibit more stable performance.
+
+---
+
+### 3. **Prioritize Current Ratio and LTV Covenants in Risk Models**
+
+* **Current Ratio** breaches, though less frequent, have the highest predictive power (12.5% lead to default), followed by **LTV** (11.84%).
+* **Recommendation**: Assign higher weight to **Current Ratio** and **LTV** breaches in early warning systems and default prediction models. Reconsider the emphasis on **Debt/EBITDA**, which shows limited predictive strength despite frequent breaches.
+
+---
+
+### 4. **Address Persistently High Covenant Breach Rates**
+
+* Breach rates have remained **consistently high (61–68%)**, with seasonal peaks in Q3 (e.g., 67.78% in Q3 2021), suggesting systemic issues or cyclic stress.
+* **Recommendation**: Investigate root causes of systemic covenant failures — e.g., unrealistic thresholds, economic seasonality, or borrower profile mismatches. Consider covenant adjustments or additional support interventions during known stress periods.
+
+---
+
+### 5. **Investigate Post-Lockdown Financial Behavior**
+
+* Sharp mid-2021 spike in **Debt/EBITDA** for both the **Finance sector** and the **Isle of Man** suggests possible post-COVID financial strain or overleveraging.
+* **Recommendation**: Conduct a drill-down into this period and segment to assess whether elevated leverage was temporary or a structural risk shift. Use findings to inform future risk stress-testing scenarios.
+
+---
+
+### 6. **Implement Risk-Weighted Covenant Enforcement**
+
+* One-size-fits-all covenants are contributing to widespread, possibly uninformative, breach rates.
+* **Recommendation**: Tailor covenant thresholds by sector, region, and borrower risk profile to reduce false positives and improve signal-to-noise ratio in risk detection.
+
+---
+
+### 7. **Enhance Portfolio Management Tools**
+
+* The high number of potential breaches (under stricter covenants) highlights the need for scalable risk infrastructure.
+* **Recommendation**: Implement automated monitoring tools and dashboard alerts to track covenant breaches in real time, especially under tighter rules.While stricter covenants can enhance early risk detection, they also risk overwhelming monitoring teams and increasing borrower non-compliance. Adopt a **tiered approach**: apply tighter covenants to higher-risk borrowers or sectors only.
 

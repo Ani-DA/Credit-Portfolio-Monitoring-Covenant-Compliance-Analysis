@@ -34,9 +34,13 @@ This project uses a set of simulated but realistic tables representing key entit
 ![cov](https://github.com/user-attachments/assets/bac2f90b-6e98-45b8-b0e2-f005cd407457)
 
   
-* **Derived Views**: Financial ratios and covenant checks are computed in analytical views to support dashboarding and executive reporting.
 
-Together, these tables enable a multi-layered risk analysis combining borrower behavior, financial performance, and loan structure to surface insights critical for credit risk management.
+Here's the relationship among these primary tables.
+
+
+![model](https://github.com/user-attachments/assets/72448604-badb-47cb-bf19-56d506312699)
+
+
 
 
 ## 2. Business Problem
